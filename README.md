@@ -1,117 +1,127 @@
-# Hey Dear friends 👋
+💬 LAN Chat Application (Python)
 
-# ECE A section 🎓
+👋 Hey there!
 
-### 😃 Hi there.
-This is the basic version of the terminal based messaging server. Where anyone can host, any one can join any one. This mini project is made by myself... 
-> This page contains python script, which has two files.  
->   1. **server.py** 🖥️ \
->      The main file, hosts a system as a messaging server  
->
->   2. **client.py** 💻 \
->      This is the file Where clients/ users can connect to your server.
+This is a simple terminal-based messaging system built using Python.
+Anyone can host a server and multiple users can join and chat in real-time over the same network.
 
 ---
 
-### Worried about running scripts...? 😅
+📁 Project Files
 
-Dead simple... ✅
+1. serverNEW.py 🖥️
+   Hosts the chat server
+
+2. client.py 💻
+   Connects users to the server
 
 ---
 
-### #1
-run this command.. ⬇️
+⚙️ Requirements
+
+Make sure your system has:
+
+✅ Python 3
+
+Check:
 ```bash
+python3 --version
+```
+If not installed:
+```bash
+sudo apt update
+sudo apt install python3 -y
+```
+---
+
+✅ Git (to download project)
+
+```shell
 if ! command -v git >/dev/null 2>&1; then
-
-
-printf "Program git is not installed...\nPlease enter the password to continue...\nProceeding to install..."
-
-
-if  command -v  sudo >/dev/null 2>&1; then 
-sudo apt install git -y;
-
-else 
-apt install git -y;
-
-fi;
-fi;
+  echo "Installing git..."
+  sudo apt install git -y
+fi
 ```
-
-
-
-Then this
-```git
-
-cd ~/
-git clone "http://github.com/computer-collab/clab.git" \
-&& \
-echo "Git cloned Successfully "
-```
-
-This clones the remote (online) files into your system.
-
 ---
 
-### #2
+🚀 Setup & Run
 
-**Run server as:**
-```sh
-python3 ~/clab/server.py
+🔽 Step 1: Download Project
+```shell
+cd ~
+git clone https://github.com/kanmanoor-karthik/clab.git
+cd clab
 ```
-This will host server port 8000.
-
-**Run client as:**
-```sh
-python3 ~/clab/client.py
-```
-
 ---
 
-## As an alternative... 🔄
-
-You can directly download the zip from github, extract files, and navigate the terminal through your file location, where you have extracted.
-
-##### Then run it using python3
-
-server:
-```sh
-python3 server.py
+▶️ Step 2: Run Server
+```shell
+python3 serverNEW.py
 ```
+You should see:
+```Output
+Server running on 0.0.0.0:5000
+```
+---
 
-client:
-```sh
+📡 Step 3: Run Client
+```shell
 python3 client.py
 ```
+---
 
-##### Note:
-Make sure these two commands run on the devices on same local network 🌐.\
-You can use the same devices, but two different terminal windows.\
-This has ip of 10.3.4.142, which may not be suitable for other systems, and may has to assign manually.
+🔌 Connecting to Server
+
+🟢 Method 1 (Shortcut for CLAB users)
+
+If you're in CLAB 301, just type:
+```input
+clab
+```
+---
+
+🔵 Method 2 (Manual – for everyone else)
+
+1. Find server IP (on server device):
+
+```terminal
+ip a
+```
+
+
+```shell
+ifconfig
+```
+Look for:
+```ip sample
+192.168.x.x
+```
+or
+
+any similar formatted text like
+xx.yy.zz.ww, where each number (xx,yy,zz,ww) ranges from (0-255)
+---
+
+2. Enter in client:
+```output
+Enter server address: 192.168.x.x
+Enter port: 5000
+```
+---
+
+💬 Example Chat
+```output
+[17:30] user1: hello
+[17:31] user2: hi
+[17:31] You: how are you?
+```
+---
+
+👨‍💻 Contributors
+
+- [Batman](http://github.com/kanmanoor-karthik)
+- [Flashman](http://github.com/kummarirahul1980)
 
 ---
 
-### Thats it ... You are good to go ✅
-
-## Now,
-
-### Connecting to the server: 🔌
-
-We have two methods.
-
-1. According to CLAB 301, you can just type "clab" in the host field. Thats it. Then enter the username for uniqueness ✨.
-
-2. Manually find the ip address and port from files. Insert them directly instead of "clab". It will ask for port. Default value is 8000 🔑.
-
----
-
-> If you see, connected ✅, you are good to go. Else try restarting the files 🔄.
->
-> You can start chatting 💬...
-
-
-
-# Contributors
-
-> [Batman](http://github.com/kanmanoor-karthik)\
-> [Flashman](http://github.com/kummarirahul1980)
+✅ That’s it — you’re ready to go!
